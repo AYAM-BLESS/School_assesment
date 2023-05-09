@@ -21,7 +21,7 @@ int main() {
         // Child process
         printf("In Child process: Enter 25 integer numbers:\n");
         for (int i = 0; i < 25; i++) {
-            scanf("%d", &y[i]);
+            scanf("%d", &y[i]); //reads an integer value and store it in the y array at index i
             printf("In Child process: Received y[%d] = %d from the user\n", i, y[i]);
         }
         close(fd[0]); // close read end of pipe
