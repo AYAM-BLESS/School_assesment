@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-
+#include<sys/wait.h>
 int main() {
     int fd[2]; //file descriptor for pipe
     pid_t pid;
@@ -11,7 +11,7 @@ int main() {
         fprintf(stderr, "Pipe failed");
         return 1;
     }
-
+    else{
     pid = fork();
 
     if (pid < 0) {
@@ -31,6 +31,7 @@ int main() {
         printf("In Parent process: Received from child process the value %d\n", z);
         z += 15; //add 15 to the value received from the child
         printf("In Parent process: The new value of z is: %d\n", z);
+    }
     }
     return 0;
 }
