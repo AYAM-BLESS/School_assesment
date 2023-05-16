@@ -9,7 +9,7 @@ int main() {
    int fd;
    int y;
 
-   // Create the named pipe
+   // Create the named pipe with permision set to 0666
    mkfifo("myfifo", 0666);
 
    // Prompt the user to enter an integer
