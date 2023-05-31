@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<unistd.h>
 #include<stdlib.h>
-#include<strings.h>
+#include<string.h>
 #include<sys/socket.h> // To work with socket programming
 #include<sys/types.h>
 #include<arpa/inet.h>
